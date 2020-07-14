@@ -29,19 +29,19 @@ engine 1 & engine 2 & engine 3\\
 \undergroup{0}&\undergroup{0}&\undergroup{1}\\
 \end{bmatrix}$$
 
-这里我们用3组向量的形式来代表当前发动机的动力配置。由于飞船的能量来源特殊，飞船是无法转向的，只能在发动机动力的直线上航行，因此我们会有多个发动机（后面章节会解释哦🥺）。如果我们需要前往：
+这里我们用3组向量的形式来代表当前发动机的动力方向配置。由于飞船的能量来源特殊，飞船是无法转向的，只能在发动机动力方向的直线上航行，因此我们会有多个发动机（后面章节会解释哦🥺）。如果我们需要前往：
 
 $$\begin{bmatrix} 
  1\\ 1\\ 0
 \end{bmatrix}$$
 
-那么我们只需要发动机No1和发动机No2各运行一次即可。发动机也可以逆向运行。前往
+那么我们只需要为发动机No1和发动机No2各提供能量1次即可。发动机也可以逆向运行。前往
 
 $$\begin{bmatrix} 
 -5\\2\\2
 \end{bmatrix}$$
 
-只需要发动机No1逆向发动5次，发动机No3正向发动2次。另外需要注意的就是发动机No3每次运行，都会让飞船在这3维宇宙中的两个维度同时移动。这就让发动机发动几次才能到达某地的计算更复杂了。我们也想每次发动机都能只在自己的维度上提供动力，就像如下的动力配置：
+只需要给发动机No1提供逆向能量5次，给发动机No3提供正向能量2次。另外需要注意的就是发动机No3每次运行，都会让飞船在这3维宇宙中的两个维度同时移动。这就让发动机提供能量几次才能到达某地的计算更复杂了。我们也想每次发动机都能只在自己的维度上运动，就像如下的发动机配置：
 
 $$\begin{bmatrix} 
 engine 1 & engine 2 & engine 3\\
@@ -50,7 +50,7 @@ engine 1 & engine 2 & engine 3\\
 \undergroup{0}&\undergroup{0}&\undergroup{1}\\
 \end{bmatrix}$$
 
-可惜的是因为能量来源的问题，发动机提供动力的方向往往是我们无法决定的😅。在飞船进入某个维度宇宙之后，我们能决定的就是启动几次发动机来到达我们的目的地。为了方便，我们将发动机启动的次数也以向量来表示。
+可惜的是因为能量来源的问题，发动机提供动力的方向是我们无法决定的😅，而是由飞船所在的宇宙区域所决定。在飞船进入某个宇宙区域后，我们能决定的就是给每个发动机提供几次能量来到达我们的目的地。为了方便，我们将为发动机提供能量的次数也以向量来表示。
 
 $$\begin{bmatrix} 
 engine 1 & engine 2 & engine 3\\
@@ -59,7 +59,7 @@ engine 1 & engine 2 & engine 3\\
 \undergroup{0}&\undergroup{0}&\undergroup{1}\\
 \end{bmatrix}
 \begin{bmatrix} 
-&启动次数\\
+&能量\\
 engine 1 &-5\\
 engine 2 &0\\
 engine 3 &2
@@ -70,7 +70,7 @@ engine 3 &2
 -5\\2\\2
 \end{bmatrix}$$
 
-### **飞船舰长职责 1：计算发动机启动次数**
+### **飞船舰长职责 1：计算给发动机提供多少能量**
 
 现在我们飞入了某个4维宇宙，舰长的责任之一就是在我掉线的时候也能给出w,x,y,z的数值🤔：
 
@@ -82,7 +82,7 @@ e1 & e2 & e3 & e4\\
 \undergroup{0}&\undergroup{0}&\undergroup{1}&\undergroup{-1}\\
 \end{bmatrix}
 \begin{bmatrix} 
-&启动次数\\
+&能量\\
 e1&w\\
 e2&x\\
 e3&y\\
@@ -94,15 +94,15 @@ e4&z
 -2\\1\\2\\4
 \end{bmatrix}$$
 
-如果我们用A来代表发动机动力配置组成的矩阵，x代表每个发动机启动次数的向量，b代表目的地坐标向量。舰长责任1 就是求解：
+如果我们用A来代表发动机动力方向组成的矩阵，x代表每个发动机提供多少能量的向量，b代表目的地坐标向量。舰长责任1 就是求解：
 
 $$Ax=b$$
 
-这也是作为舰长最重要的职责了。大部分其它职责都和Ax=b有各种各样的联系。我们将在接下来的几章中慢慢讨论如何得到x的值。而在本章中，我们则先从更简单的舰长指责开始。
+这也是作为舰长最重要的职责了。大部分其它职责都和Ax=b有各种各样的联系。我们将在接下来的几章中慢慢讨论如何得到x的值。而在本章中，我们则先从更简单的舰长职责开始。
 
 ### **飞船舰长职责 2: 计算目的地**
 
-一般来说，您告诉我想前往的目的地后，我会给出发动机启动次数的向量。例如：
+一般来说，您告诉我想前往的目的地后，我会给出每个发动机需要多少能量的向量。例如：
 
 
 $$\begin{bmatrix} 
@@ -113,7 +113,7 @@ e1 & e2 & e3 & e4\\
 \undergroup{0}&\undergroup{0}&\undergroup{1}&\undergroup{-1}\\
 \end{bmatrix}
 \begin{bmatrix} 
-&启动次数\\
+&能量\\
 e1&w\\
 e2&x\\
 e3&y\\
@@ -144,7 +144,7 @@ e1 & e2 & e3 & e4\\
 \end{bmatrix}
 
 \begin{bmatrix} 
-启动次数\\
+能量\\
 1\\
 5\\
 2\\
@@ -210,8 +210,9 @@ $$\begin{bmatrix}
 2\\
 -2
 \end{bmatrix}
+=？
 
-\\无法计算啊？？明明只有三组发动机！！😂
+\\无法计算啊摔！多了一个能量数据啊八戒！
 $$
 
 或是：
@@ -226,8 +227,8 @@ $$\begin{bmatrix}
 1\\
 -3
 \end{bmatrix}
-
-\\少了一组发动机的数据阿咧！还是不要贸然出发吧。
+=?
+\\少了一个发动机的能量数据阿咧！剩下的两个哪个发动机用啊？
 $$
 所以最好还是不要依赖我这个AI来给出Ax=b的答案吧拜托了🙏🐶
 
@@ -244,7 +245,7 @@ engine 1\\
 \end{bmatrix}
 $$
 
-在这个3维宇宙中，我们只能在一条直线上移动😭！启动1号发动机5次我们就到了$\begin{bmatrix}\overgroup{1}\\0\\\undergroup{0}\end{bmatrix}×\begin{bmatrix}5\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}$。若是反向启动3次我们就到了$\begin{bmatrix}\overgroup{1}\\0\\\undergroup{0}\end{bmatrix}×\begin{bmatrix}-3\end{bmatrix}=\begin{bmatrix}-3\\0\\0\end{bmatrix}$。可是我们永远到不了$\begin{bmatrix}5\\0\\2\end{bmatrix}$！有时候我们会得到三个发动机，它们却是像这样的！
+在这个3维宇宙中，我们只能在一条直线上移动😭！给1号发动机供能5次我们就到了$\begin{bmatrix}\overgroup{1}\\0\\\undergroup{0}\end{bmatrix}×\begin{bmatrix}5\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}$。若是反向供能3次我们就到了$\begin{bmatrix}\overgroup{1}\\0\\\undergroup{0}\end{bmatrix}×\begin{bmatrix}-3\end{bmatrix}=\begin{bmatrix}-3\\0\\0\end{bmatrix}$。可是我们永远到不了$\begin{bmatrix}5\\0\\2\end{bmatrix}$！有时候宇宙会赐予我们三个发动机，它们却是像这样的：
 
 $$
 \begin{bmatrix}
@@ -255,8 +256,67 @@ engine1&engine2&engine3\\
 \end{bmatrix}
 $$
 
-没写完：
+显然一号和二号发动机作用是完全一样的啊！而三号发动机完全没有用🤦！这和只有一个发动机有什么区别啊！但是！区别还是有的！那就是，如果您想前往$\begin{bmatrix}5\\0\\0\end{bmatrix}$，您可以有多个选择！您可以
 
-span
+$$
+\begin{bmatrix}
+\overgroup{1}&\overgroup{1}&\overgroup{0}\\
+0&0&0\\
+\undergroup{0}&\undergroup{0}&\undergroup{0}
+\end{bmatrix}
+×
+\begin{bmatrix}5\\0\\0\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}
+$$
 
-有无解，无穷解 （发动机不够，发动机太多，发动机够但是不好）
+也可以
+
+$$
+\begin{bmatrix}
+\overgroup{1}&\overgroup{1}&\overgroup{0}\\
+0&0&0\\
+\undergroup{0}&\undergroup{0}&\undergroup{0}
+\end{bmatrix}
+×
+\begin{bmatrix}0\\5\\0\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}
+$$
+
+甚至可以
+
+$$
+\begin{bmatrix}
+\overgroup{1}&\overgroup{1}&\overgroup{0}\\
+0&0&0\\
+\undergroup{0}&\undergroup{0}&\undergroup{0}
+\end{bmatrix}
+×
+\begin{bmatrix}-7\\12\\0\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}
+$$
+
+也就是说只要是$\begin{bmatrix}t\\0\\0\end{bmatrix}$这一直线上的旅途的终点，您可以任性搭配1号和2号发动机！当然您还是不能去任何第二维度或是第三维度上非0的地方。
+
+有时候，您会遇到这样的发动机组：
+
+$$
+\begin{bmatrix}
+engine1&engine2&engine3\\ 
+\overgroup{2}&\overgroup{0}&\overgroup{3}\\
+\undergroup{0}&\undergroup{1}&\undergroup{0}
+\end{bmatrix}
+$$
+
+在2维宇宙中有3个发动机，那么肯定是有多余的发动机不是吗？每次给发动机1号供能1.5的话，它的动力就和3号发动机一样了。同理，在5维宇宙只有5个方向，如果您配置了8个发动机，那么至少有3个是没用的。若是这8个发动机方向上有所重复，只能在2个方向上移动飞船，那么就有6个发动机是在划水摸鱼了喂。
+
+这些就是发动机组故障的概述。今后我们还会回顾这些问题呦。例如在4维宇宙中，这样的发动机组：
+
+$$
+\begin{bmatrix}
+engine1&engine2&engine3&engine4\\ 
+\overgroup{2}&\overgroup{1}&\overgroup{4}&\overgroup{7}\\
+-3&2&1&0\\
+4&-2&0&2\\
+\undergroup{1}&\undergroup{1}&\undergroup{3}
+&\undergroup{5}
+\end{bmatrix}
+$$
+
+到底是不是能随意游走到4维宇宙里到每个目的地呢？还是只能在4维空间的某个亚3维空间，或者只在一个平面上，或者只是一条直线上移动呢？
