@@ -10,7 +10,7 @@
 
 $$\begin{bmatrix} Latitude: 39.9042° N \\ Longitude: 116.4074° E\end{bmatrix}$$
 
-宇宙的导航图也采用类似的坐标系。二维宇宙采用2维坐标，三为宇宙则是3维。而
+宇宙的导航图也采用类似的坐标系。二维宇宙采用2维坐标，三维宇宙则是3维。而
 
 $$\begin{bmatrix} 
 5 \\ 7 \\ -3 \\ 0 \\12
@@ -265,7 +265,7 @@ $$
 \undergroup{0}&\undergroup{0}&\undergroup{0}
 \end{bmatrix}
 ×
-\begin{bmatrix}5\\0\\0\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}
+\begin{bmatrix}5\\0\\42\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}
 $$
 
 也可以
@@ -277,7 +277,7 @@ $$
 \undergroup{0}&\undergroup{0}&\undergroup{0}
 \end{bmatrix}
 ×
-\begin{bmatrix}0\\5\\0\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}
+\begin{bmatrix}0\\5\\42!\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}
 $$
 
 甚至可以
@@ -289,10 +289,10 @@ $$
 \undergroup{0}&\undergroup{0}&\undergroup{0}
 \end{bmatrix}
 ×
-\begin{bmatrix}-7\\12\\0\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}
+\begin{bmatrix}-7\\12\\42!!\end{bmatrix}=\begin{bmatrix}5\\0\\0\end{bmatrix}
 $$
 
-也就是说只要是$\begin{bmatrix}t\\0\\0\end{bmatrix}$这一直线上的旅途的终点，您可以任性搭配1号和2号发动机！当然您还是不能去任何第二维度或是第三维度上非0的地方。
+也就是说只要是$\begin{bmatrix}a\\0\\0\end{bmatrix}$这一直线上的旅途的终点，您可以任性搭配1号和2号发动机！当然您还是不能去任何第二维度或是第三维度上非0的地方。
 
 有时候，您会遇到这样的发动机组：
 
@@ -304,7 +304,7 @@ engine1&engine2&engine3\\
 \end{bmatrix}
 $$
 
-在2维宇宙中有3个发动机，那么肯定是有多余的发动机不是吗？每次给发动机1号供能1.5的话，它的动力就和3号发动机一样了。同理，在5维宇宙只有5个方向，如果您配置了8个发动机，那么至少有3个是没用的。若是这8个发动机方向上有所重复，只能在2个方向上移动飞船，那么就有6个发动机是在划水摸鱼了喂。
+在2维宇宙中有3个发动机，那么肯定是有多余的发动机不是吗？每次给发动机1号供能1.5的话，它的动力就和3号发动机一样了。同理，5维宇宙中只有5个方向，如果您配置了8个发动机，那么至少有3个是没用的。若是这8个发动机方向上有所重复，只能在2个方向上移动飞船，那么就有6个发动机是在划水摸鱼了喂。
 
 这些就是发动机组故障的概述。今后我们还会回顾这些问题呦。例如在4维宇宙中，这样的发动机组：
 
