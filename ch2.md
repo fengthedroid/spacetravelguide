@@ -144,6 +144,17 @@ $$
 \end{bmatrix}}}
 \end{bmatrix}
 \end{array}
+\\
+\\
+&=
+\begin{array}{c}
+空间扭曲后坐标\\
+\begin{bmatrix} 
+食堂&篮球场&宿舍&烧烤摊\\
+3&7.5&0&12\\
+2&17.8&0&4.4
+\end{bmatrix}
+\end{array}
 
 \end{aligned}
 $$
