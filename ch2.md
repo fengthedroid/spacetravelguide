@@ -87,7 +87,8 @@ $$
 $$
 \begin{aligned}
 &\begin{array}{c}
-   空间的扭曲&\\
+   用线性变换引擎\\
+   实现空间的扭曲-矩阵B&\\
    \begin{bmatrix} 
 \overgroup{0.1}&\overgroup{0}\\
 \undergroup{0}&\undergroup{0.2}
@@ -95,7 +96,7 @@ $$
 \end{array}
 ×
 \begin{array}{c}
-空间扭曲前坐标\\
+空间扭曲前坐标-矩阵C\\
 \begin{bmatrix} 
 食堂&篮球场&宿舍&烧烤摊\\
 30&75&0&120\\
@@ -150,7 +151,7 @@ $$
 \\
 &=
 \begin{array}{c}
-空间扭曲后坐标\\
+空间扭曲后坐标BC\\
 \begin{bmatrix} 
 食堂&篮球场&宿舍&烧烤摊\\
 3&7.5&0&12\\
@@ -161,8 +162,84 @@ $$
 \end{aligned}
 $$
 
-为了操作线性变换引擎，我们用到了两个矩阵。第一个$\begin{bmatrix} \overgroup{0.1}&\overgroup{0}\\\undergroup{0}&\undergroup{0.2}\end{bmatrix}$代表的是空间的扭曲，第二个则是4个不得不去的坐标的集合。之前我们介绍了矩阵（发动机）乘以向量（能量）的算法。现在两个矩阵相乘，也可以看成是第二个矩阵内每个向量单独和第一个矩阵相乘，最后再集合成为一个矩阵。如果明天学校把空间扭曲前的烧烤摊撤了，那么空间扭曲后的矩阵也只剩3个坐标向量。并且坐标的数值并不会受到烧烤摊消失的影响。只是心情会有些许低落。
+为了操作线性变换引擎，我们用到了两个矩阵。矩阵$B$代表的是空间的扭曲，矩阵$C$则是4个不得不去的坐标的集合。之前我们介绍了矩阵（发动机）乘以向量（能量）的算法。现在两个矩阵相乘，也可以看成是右边的矩阵内每个向量单独和左边的矩阵相乘，最后再集合成为一个矩阵。如果明天学校把空间扭曲前的烧烤摊撤了，那么空间扭曲后的矩阵也只剩3个坐标向量。并且坐标的数值不会受到烧烤摊消失的影响。只是心情会有些许低落。
 
+显然，教数学的体育老师是不会让你随便扭曲学校的空间的！为了让学生们有更多锻炼身体的机会，他也使用了线性变换$\begin{bmatrix} \overgroup{30}&\overgroup{10}\\\undergroup{10}&\undergroup{30}\end{bmatrix}$！
+
+$$
+\begin{aligned}
+&\begin{array}{c}
+   体育老师的线性变换A&\\
+   \begin{bmatrix} 
+\overgroup{30}&\overgroup{10}\\
+\undergroup{10}&\undergroup{30}
+\end{bmatrix}
+\end{array}
+×
+\begin{array}{c}
+我方线性变换后坐标BC\\
+\begin{bmatrix} 
+食堂&篮球场&宿舍&\sout{烧烤摊}\\
+3&7.5&0\\
+2&17.8&0
+\end{bmatrix}
+\end{array}
+\\
+\\
+&=
+\begin{array}{c}
+   体育老师的线性变换A&\\
+   \begin{bmatrix} 
+\overgroup{30}&\overgroup{10}\\
+\undergroup{10}&\undergroup{30}
+\end{bmatrix}
+\end{array}
+×
+\begin{array}{c}
+   我方的线性变换B&\\
+   \begin{bmatrix} 
+\overgroup{0.1}&\overgroup{0}\\
+\undergroup{0}&\undergroup{0.2}
+\end{bmatrix}
+\end{array}
+×
+\begin{array}{c}
+最开始的坐标C\\
+\begin{bmatrix} 
+食堂&篮球场&宿舍\\
+30&75&0\\
+10&89&0
+\end{bmatrix}
+\end{array}
+\\
+\\
+&=
+\begin{array}{c}
+   在线性变换B之上加以体育老师的变换AB&\\
+   \begin{bmatrix} 
+\overgroup{3}&\overgroup{2}\\
+\undergroup{1}&\undergroup{6}
+\end{bmatrix}
+\end{array}
+×
+\begin{array}{c}
+最开始的坐标C\\
+\begin{bmatrix} 
+食堂&篮球场&宿舍\\
+30&75&0\\
+10&89&0
+\end{bmatrix}
+\end{array}
+
+\\
+\end{aligned}
+$$
+
+尽管矩阵$A$和$B$代表的是线性变换，而$C$是坐标的集合，以上$AB$的计算方法和计算$BC$却是一致的。毕竟矩阵自身没有标签。若是把所有文字去掉只剩下数字，谁也不知道矩阵$C$到底是坐标的集合还是线性变换吧？
+
+从上面的几次线性变换也可以看出，每次都是左边的矩阵~~扭曲~~变换右边的矩阵。顺序可是固定的哦。
+
+### **派对后的打扫工作-反~~空间扭曲~~线性变换**
 -----
 
 
