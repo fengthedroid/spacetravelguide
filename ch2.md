@@ -21,29 +21,36 @@ $$
 
 线性变换引擎就是用来改变宇宙的形状的：
 
-$$\begin{bmatrix} 
-空~间&的&扭~曲&\\
+$$
+\begin{array}{c}
+   空间的扭曲&\\
+   \begin{bmatrix} 
 \overgroup{1/30}&\overgroup{0}&\overgroup{0}\\
 0&1/20&0\\
 \undergroup{0}&\undergroup{0}&\undergroup{1/10}
 \end{bmatrix}
+\end{array}
 
-\begin{bmatrix} 
+\begin{array}{c}
 空间扭曲前坐标\\
+\begin{bmatrix} 
 30\\
 20\\
 10
 \end{bmatrix}
+\end{array}
 =
-\begin{bmatrix} 
+\begin{array}{c}
 空间扭曲后坐标\\
+\begin{bmatrix} 
 1\\
 1\\
 1
 \end{bmatrix}
+\end{array}
 $$
 
-可惜的是三体人发觉线性变换引擎也可以作为可怕的武器使用。首先是扭曲敌人的宇宙空间，让敌人无法到达目的地。这也是第一章真正主要介绍的内容：计算目的地在扭曲后空间的位置：
+可惜的是文明的本能是会把任何科技作为武器，线性变换引擎也不例外。它可以用来扭曲敌人的宇宙空间，让敌人无法到达目的地。这也是第一章真正主要介绍的内容：计算目的地在扭曲后空间的位置：
 
 $$
 空间扭曲A × 扭曲前的坐标c = 扭曲后的坐标z
@@ -55,7 +62,7 @@ $$
 空间扭曲A × 扭曲前的坐标x = 扭曲后的坐标b
 $$
 
-以我们的技术，我们一般有两种方式来解得扭曲前的坐标x。第一种是口算，第二种是用我们自己的线性变换引擎把宇宙空间复原成扭曲前的样子：
+以我们的技术，我们一般有两种方式来解得扭曲前的坐标$x$。第一种是口算，第二种是用我们自己的线性变换引擎把宇宙空间复原成扭曲前的样子：
 
 $$
 \begin{aligned}
@@ -65,7 +72,7 @@ $$
 \end{aligned}
 $$
 
-没错，现在多维飞船没有线性变换引擎都不好意思跟外星人打招呼。经常可以见到一片宇宙空间被路人们扭曲多次！
+没错，现在量产的多维飞船没有线性变换引擎都不好意思跟外星人打招呼。经常可以见到一片宇宙空间被路人们扭曲多次！
 
 $$
 真·空间扭曲Z = 第n次空间扭曲N × ... × 第2次空间扭曲B × 第1次空间扭曲A
@@ -73,8 +80,76 @@ $$
 
 相信作为舰长的您，也会好奇如何掌握真·空间扭曲Z，并且口算出$真·反空间扭曲Z^{-1}$的吧？
 
+### **矩阵的双重身份**
+
+$$
+\begin{aligned}
+&\begin{array}{c}
+   空间的扭曲&\\
+   \begin{bmatrix} 
+\overgroup{0.1}&\overgroup{0}\\
+\undergroup{0}&\undergroup{0.2}
+\end{bmatrix}
+\end{array}
+×
+\begin{array}{c}
+空间扭曲前坐标\\
+\begin{bmatrix} 
+食堂&篮球场&宿舍&烧烤摊\\
+30&75&0&120\\
+10&89&0&22
+\end{bmatrix}
+\end{array}
+\\
+\\
+&=
+\begin{array}{c}
+空间扭曲后坐标\\
+\begin{bmatrix} 
+食堂&篮球场&宿舍&烧烤摊\\
+\overgroup{\undergroup{\begin{bmatrix} 
+.1&0\\
+0&.2
+\end{bmatrix}
+\begin{bmatrix} 
+30\\
+10
+\end{bmatrix}}}
+&
+\overgroup{\undergroup{\begin{bmatrix} 
+.1&0\\
+0&.2
+\end{bmatrix}
+\begin{bmatrix} 
+75\\
+89
+\end{bmatrix}}}
+&
+\overgroup{\undergroup{\begin{bmatrix} 
+.1&0\\
+0&.2
+\end{bmatrix}
+\begin{bmatrix} 
+0\\
+0
+\end{bmatrix}}}
+&
+\overgroup{\undergroup{\begin{bmatrix} 
+.1&0\\
+0&.2
+\end{bmatrix}
+\begin{bmatrix} 
+120\\
+22
+\end{bmatrix}}}
+\end{bmatrix}
+\end{array}
+
+\end{aligned}
+$$
+
 -----
-矩阵的双重身份
+
 
 宇宙的维度与方向 -》 黑洞
 
