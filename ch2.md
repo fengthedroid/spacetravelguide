@@ -88,11 +88,14 @@ $$
 
 ### <span style="color:#6c9ef0" /> **宇宙与光**（乐队队名预定，都别抢）
 
-宇宙真的真的[好大好空](https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html)。就算空间被扭曲，似乎也没有办法什么观测到扭曲的效果。我们如何度量这样庞大的虚无呢？
+宇宙真的真的[好大好空](https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html)。就算空间被扭曲，似乎也没有办法什么观测到扭曲的效果。我们如何度量这样无边的虚无呢？
 
+![lightray](https://github.com/fengthedroid/spacetravelguide/blob/master/resources/ch2-1.gif)
 
+向量也可以用来代表光前进的方向和速度。
+$\begin{bmatrix}3\\4\end{bmatrix}$代表的就是在2维空间中，由原点向(3,4)前进的光。
 
-之前我们用向量代表过坐标，或是发动机引擎，或是能量。下面我们要用向量代表光前进的速度和方向。
+![lightWithCoordinate](https://github.com/fengthedroid/spacetravelguide/blob/master/resources/ch2-2.png)
 
 在未被扭曲过的3维宇宙中，光可以自由地在任一一个维度上以标准光速前进。这样的空间可以用：
 
