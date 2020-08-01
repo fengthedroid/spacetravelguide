@@ -61,7 +61,7 @@ $$
 
 $\begin{bmatrix}\overgroup{1}&\overgroup{0}\\\undergroup{0}&\undergroup{1}\end{bmatrix}$
 
-<img align="right" src="https://raw.githubusercontent.com/fengthedroid/spacetravelguide/master/resources/ch2-1.png">
+<img src="https://raw.githubusercontent.com/fengthedroid/spacetravelguide/master/resources/ch2-1.png"/>
 
 三体人的探测器💧在摧毁人类舰队的时候，大家注意到了它可以做到速度不变的转向。在这里提起，应该不难想到它也装备了线性变换引擎吧。若是要做到在2维空间内180度掉头并保留动量，只需将前方的空间扭曲为：
 
