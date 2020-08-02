@@ -126,7 +126,7 @@ $$
 
 ### <span style="color:#6c9ef0" /> **飞船舰长职责：计算多个线性变换后的坐标系**
 
-显然，当整片太空区域被线性变换，区域内的太空以及物质都会受到影响。拿我们的宁静号举例，在线性变换$\begin{bmatrix} \overgroup{0}&\overgroup{-0.5}\\\undergroup{1.5}&\undergroup{0}\end{bmatrix}$后，不但我们的行驶方向变了，船体也变长了。
+显然，当整片太空区域被线性变换，区域内的太空以及物质都会受到影响。拿我们的宁静号举例，在线性变换$\begin{bmatrix} \overgroup{0}&\overgroup{-0.5}\\\undergroup{1.5}&\undergroup{0}\end{bmatrix}$后，不但整个船被移动到了新的位置，而且船体的形状和方向也变了。
 
 <center>
 <img src="https://raw.githubusercontent.com/fengthedroid/spacetravelguide/master/resources/ch2-2.gif"/>
@@ -286,5 +286,7 @@ $$
 \end{array}
 \end{aligned}
 $$
+
+这样一次改变一点点，逐渐将扭曲的空间变回正常空间的算法，叫做Gauss–Jordan elimination（高斯-若尔当消元法）。
 
 可惜的是，不是所有被线性变换所扭曲的太空都是可以还原的。某些线性变换对空间具有降维打击的效果。被降维的空间内的信息会被遗失。这样的空间将再也无法还原到过去。
