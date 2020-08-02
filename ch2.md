@@ -128,6 +128,10 @@ $$
 
 显然，当整片太空区域被线性变换，区域内的太空以及物质都会受到影响。
 
+<center>
+<img width="200" src="https://raw.githubusercontent.com/fengthedroid/spacetravelguide/master/resources/ch2-2.gif"/>
+</center>
+
 $$
 \begin{aligned}
 &\begin{array}{c}
@@ -150,24 +154,25 @@ $$
 \\
 &=
 \begin{array}{c}
-\begin{bmatrix} 
- \begin{bmatrix} 
+   \begin{bmatrix} 
+   \overgroup{\undergroup{\begin{bmatrix} 
+
 \overgroup{0}&\overgroup{-0.5}\\
 \undergroup{1.5}&\undergroup{0}
 \end{bmatrix}
 \begin{bmatrix} 
 2.25\\
 1
-\end{bmatrix}
+\end{bmatrix}}}
 &
- \begin{bmatrix} 
+\overgroup{\undergroup{\begin{bmatrix} 
 \overgroup{0}&\overgroup{-0.5}\\
 \undergroup{1.5}&\undergroup{0}
 \end{bmatrix}
 \begin{bmatrix} 
 0.5\\
 1.75
-\end{bmatrix}
+\end{bmatrix}}}
 \end{bmatrix}
 \end{array}
 \\
