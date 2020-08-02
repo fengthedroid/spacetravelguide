@@ -29,7 +29,7 @@ $$
 空间扭曲A × 扭曲前的坐标x = 扭曲后的坐标b
 $$
 
-以目前的技术，我们一般有两种方式来解得扭曲前的坐标$x$。第一种是口算，第二种是用我们自己的线性变换引擎把宇宙空间复原成扭曲前的样子：
+一般有两种方式来解得扭曲前的坐标$x$。第一种方法是把数据告诉我，我再指派别人来计算（当然您也可以口算）；第二种方法是用我们自己的线性变换引擎把宇宙空间复原成扭曲前的样子，这样我们就可以直接观测，而不用计算了！
 
 $$
 \begin{aligned}
@@ -72,7 +72,7 @@ $$
 
 $$
 \begin{array}{c}
-线性扭曲后的2维坐标系\\
+线性变换对标准2维坐标系的影响\\
 \begin{bmatrix}\overgroup{1/20}&\overgroup{0}\\\undergroup{0}&\undergroup{1/10}\end{bmatrix}
 \end{array}
 ×
@@ -85,7 +85,7 @@ $$
 \end{array}
 =
 \begin{array}{c}
-宇宙尽头的烧烤摊变近了\\
+空间扭曲后烧烤摊变近了\\
 \begin{bmatrix}
 1\\
 1
@@ -97,7 +97,7 @@ $$
 
 $$
 \begin{array}{c}
-线性变换对标准3维坐标系的效果\\
+线性变换对标准3维坐标系的影响\\
 \begin{bmatrix}\overgroup{-1}&\overgroup{0}&\overgroup{0}\\
 0&-1&0\\
 \undergroup{0}&\undergroup{0}&\undergroup{-1}\end{bmatrix}
@@ -126,7 +126,7 @@ $$
 
 ### <span style="color:#6c9ef0" /> **飞船舰长职责：计算多个线性变换后的坐标系**
 
-显然，当整片太空区域被线性变换，区域内的太空以及物质都会受到影响。拿我们的宁静号举例，在线性变换$\begin{bmatrix} \overgroup{0}&\overgroup{-0.5}\\\undergroup{1.5}&\undergroup{0}\end{bmatrix}$后，不但整个船被移动到了新的位置，而且船体的形状和方向也变了。
+显然，当整片太空区域被线性变换，区域内的太空以及物质都会受到影响。拿我们的宁静号飞船举例，在线性变换$\begin{bmatrix} \overgroup{0}&\overgroup{-0.5}\\\undergroup{1.5}&\undergroup{0}\end{bmatrix}$后，不但整个船被移动到了新的位置，而且船体的形状和方向也变了。
 
 <center>
 <img src="https://raw.githubusercontent.com/fengthedroid/spacetravelguide/master/resources/ch2-2.gif"/>
@@ -289,4 +289,4 @@ $$
 
 这样一次改变一点点，逐渐将扭曲的空间变回正常空间的算法，在人类文明中叫做Gauss–Jordan elimination（高斯-若尔当消元法）。
 
-可惜的是，不是所有被线性变换所扭曲的太空都是可以还原的。某些线性变换对空间具有降维打击的效果。被降维的空间内的信息会被遗失。这样的空间将再也无法还原到过去。
+可惜的是，不是所有被线性变换所扭曲的太空都是可以还原的。某些线性变换对空间具有降维打击的效果。被降维的空间内的信息会被遗失。这样的空间将再也无法还原到过去。我们就在降维打击专门的章节再深入讨论吧！
