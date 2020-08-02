@@ -97,30 +97,93 @@ $$
 
 $$
 \begin{array}{c}
-线性变换对标准坐标系的效果\\
-\begin{bmatrix}\overgroup{-1}&\overgroup{0}\\\undergroup{0}&\undergroup{-1}\end{bmatrix}
+线性变换对标准3维坐标系的效果\\
+\begin{bmatrix}\overgroup{-1}&\overgroup{0}&\overgroup{0}\\
+0&-1&0\\
+\undergroup{0}&\undergroup{0}&\undergroup{-1}\end{bmatrix}
 \end{array}
 ×
 \begin{array}{c}
-动量向量\\
+💧速度与方向\\
 \begin{bmatrix}
 20\\
-10
+10\\
+55
 \end{bmatrix}
 \end{array}
 =
 \begin{array}{c}
-新的动量向量\\
+💧新的速度与方向\\
 \begin{bmatrix}
 -20\\
--10
+-10\\
+-55
 \end{bmatrix}
 \end{array}
 $$
 
-也就是说，我们可以用多维矩阵来地表达多维太空区域的线性扭曲状态。矩阵就是我们在线性扭曲的太空中的地图。
+也就是说，我们可以用多维矩阵来描述多维太空区域的线性扭曲状态。矩阵就是我们在线性扭曲的太空中的地图。
 
 ### <span style="color:#6c9ef0" /> **飞船舰长职责：计算多个线性变换后的坐标系**
+
+显然，当整片太空区域被线性变换，区域内的太空以及物质都会受到影响。
+
+$$
+\begin{aligned}
+&\begin{array}{c}
+   线性变换\\
+   \begin{bmatrix} 
+\overgroup{0}&\overgroup{-0.5}\\
+\undergroup{1.5}&\undergroup{0}
+\end{bmatrix}
+\end{array}
+×
+\begin{array}{c}
+宁静号\\
+\begin{bmatrix} 
+船头&船尾\\
+2.25&0.5\\
+1&1.75
+\end{bmatrix}
+\end{array}
+\\
+\\
+&=
+\begin{array}{c}
+\begin{bmatrix} 
+ \begin{bmatrix} 
+\overgroup{0}&\overgroup{-0.5}\\
+\undergroup{1.5}&\undergroup{0}
+\end{bmatrix}
+\begin{bmatrix} 
+2.25\\
+1
+\end{bmatrix}
+&
+ \begin{bmatrix} 
+\overgroup{0}&\overgroup{-0.5}\\
+\undergroup{1.5}&\undergroup{0}
+\end{bmatrix}
+\begin{bmatrix} 
+0.5\\
+1.75
+\end{bmatrix}
+\end{bmatrix}
+\end{array}
+\\
+\\
+&=
+\begin{array}{c}
+扭曲后的宁静号\\
+\begin{bmatrix} 
+船头&船尾   \\
+-0.5&-0.875\\
+3.375&0.75
+\end{bmatrix}
+\end{array}
+
+\end{aligned}
+$$
 
 //加缩小位移飞船的gif
 
