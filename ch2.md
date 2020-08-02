@@ -60,7 +60,7 @@ $$
 在2维空间中，标准坐标系是：
 
 <center>
-<img width="200" src="https://raw.githubusercontent.com/fengthedroid/spacetravelguide/master/resources/ch2-1.png"/>
+<img width="200" src="https://fengthedroid.github.io/spacetravelguide/resources/ch2-1.png"/>
 </center>
 
 $$
@@ -129,7 +129,7 @@ $$
 显然，当整片太空区域被线性变换，区域内的太空以及物质都会受到影响。拿我们的宁静号飞船举例，在线性变换$\begin{bmatrix} \overgroup{0}&\overgroup{-0.5}\\\undergroup{1.5}&\undergroup{0}\end{bmatrix}$后，不但整个船被移动到了新的位置，而且船体的形状和方向也变了。
 
 <center>
-<img src="https://raw.githubusercontent.com/fengthedroid/spacetravelguide/master/resources/ch2-2.gif"/>
+<img src="https://fengthedroid.github.io/spacetravelguide/resources/ch2-2.gif"/>
 </center>
 
 用矩阵来代表船体的变化：
