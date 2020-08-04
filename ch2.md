@@ -128,10 +128,13 @@ $$
 
 显然，当整片太空区域被线性变换，区域内的太空以及物质都会受到影响。拿我们的宁静号飞船举例，在线性变换$\begin{bmatrix} \overgroup{0}&\overgroup{-0.5}\\\undergroup{1.5}&\undergroup{0}\end{bmatrix}$后，不但整个船被移动到了新的位置，而且船体的形状和方向也变了。
 
-<center>
 原空间：
+<center>
 <img src="https://fengthedroid.github.io/spacetravelguide/resources/ch2-2.png"/>
+</center>
+
 扭曲后的空间：
+<center>
 <img src="https://fengthedroid.github.io/spacetravelguide/resources/ch2-3.png"/>
 </center>
 
